@@ -134,4 +134,56 @@ Everything up-to-date
 PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push origin --delete main          
 To https://github.com/HrishikeshWadile/todo-list.git
  - [deleted]         main
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        modified:   templates/index.html
+
+Unmerged paths:
+  (use "git add/rm <file>..." as appropriate to mark resolution)
+        deleted by us:   README.md
+
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       README.md
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git add .
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit
+[master 1d8c437] Merge branch 'master' of https://github.com/HrishikeshWadile/todo-list PS C:\Users\CCL-10\Desktop\23510065\todo-list> git init IPS C:\Users\CCL-10\Desktop\23510065\todo-list> git init Initialized empty Git repository in C:/Users/CCL-10/Desktop/23510065/todo-list/.git/ PS C:\Users\CCL-10\Desktop\23510065\todo-list> git add . PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit [master (root-commit) 41ba28f] Initial Commit  6 files changed, 211 insertions(+)  create mode 100644 Dockerfile  create mode 100644 README.md  create mode 100644 app.py  create mode 100644 requirements.txt  create mode 100644 static/styles.css  create mode 100644 templates/index.html PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push fatal: No configured push destination. Either specify the URL from the command-line or configure a remote repository using
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit\                            
+git: 'commit\' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit 
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 3.54 KiB | 3.54 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.                  
+To https://github.com/HrishikeshWadile/todo-list.git
+   6b86383..1d8c437  master -> master
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
 PS C:\Users\CCL-10\Desktop\23510065\todo-list> 
