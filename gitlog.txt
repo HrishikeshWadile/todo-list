@@ -1,0 +1,137 @@
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git init
+Initialized empty Git repository in C:/Users/CCL-10/Desktop/23510065/todo-list/.git/
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git add .
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit
+[master (root-commit) 41ba28f] Initial Commit                                         
+ 6 files changed, 211 insertions(+)
+ create mode 100644 Dockerfile
+ create mode 100644 README.md
+ create mode 100644 app.py
+ create mode 100644 requirements.txt
+ create mode 100644 static/styles.css
+ create mode 100644 templates/index.html
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git branch -M main
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git add .
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git status
+On branch main
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit
+On branch main
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git remote -v
+origin  https://github.com/HrishikeshWadile/todo-list.git (fetch)
+origin  https://github.com/HrishikeshWadile/todo-list.git (push)
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push -u origin main
+git: 'credential-manager' is not a git command. See 'git --help'.
+
+The most similar command is
+        credential-manager-core
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'main' on GitHub by visiting:                       
+remote:      https://github.com/HrishikeshWadile/todo-list/pull/new/main              
+remote: 
+To https://github.com/HrishikeshWadile/todo-list.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git branch -a
+* main
+  remotes/origin/main
+  remotes/origin/master
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git add .
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit
+[main c32ce46] Changed the h1 to show the difference between branches                 
+ 2 files changed, 59 insertions(+), 2 deletions(-)
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push
+git: 'credential-manager' is not a git command. See 'git --help'.
+
+The most similar command is
+        credential-manager-core
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 970 bytes | 970.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.                 
+To https://github.com/HrishikeshWadile/todo-list.git
+   41ba28f..c32ce46  main -> main
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git fetch origin
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git diff main origin/maste
+fatal: ambiguous argument 'origin/maste': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git diff main origin/master
+diff --git a/README.md b/README.md
+diff --git a/README.md b/README.md
+index 47cbefc..6654c40 100644
+--- a/README.md
++++ b/README.md
+@@ -104,61 +104,4 @@ Commit history tracking for all changes
+ Conflict resolution handled manually
+ Ability to rollback using revert
+ Version tagging for builds and releases
+-Demonstrates full collaboration workflow in software development
+-
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> 
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git merge origin/master
+Already up to date.
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git psuh
+git: 'psuh' is not a git command. See 'git --help'.
+
+The most similar command is
+        push
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push
+git: 'credential-manager' is not a git command. See 'git --help'.
+
+The most similar command is
+        credential-manager-core
+Everything up-to-date
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push origin --delete master
+git: 'credential-manager' is not a git command. See 'git --help'.
+
+The most similar command is
+        credential-manager-core
+To https://github.com/HrishikeshWadile/todo-list.git
+ ! [remote rejected] master (refusing to delete the current branch: refs/heads/master)
+error: failed to push some refs to 'https://github.com/HrishikeshWadile/todo-list.git'
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git checkout master
+Switched to a new branch 'master'
+branch 'master' set up to track 'origin/master'.
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push origin --delete master
+git: 'credential-manager' is not a git command. See 'git --help'.
+
+The most similar command is
+        credential-manager-core
+To https://github.com/HrishikeshWadile/todo-list.git
+ ! [remote rejected] master (refusing to delete the current branch: refs/heads/master)
+error: failed to push some refs to 'https://github.com/HrishikeshWadile/todo-list.git'
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git config --global --unset credential.helper
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git config --global credential.helper manager-core
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git checkout -b main
+>> git push origin main
+fatal: a branch named 'main' already exists
+Everything up-to-date
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push origin --delete main          
+To https://github.com/HrishikeshWadile/todo-list.git
+ - [deleted]         main
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> 
