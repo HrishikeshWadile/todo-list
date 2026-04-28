@@ -105,3 +105,60 @@ Conflict resolution handled manually
 Ability to rollback using revert
 Version tagging for builds and releases
 Demonstrates full collaboration workflow in software development
+
+
+✅ Step 3: Compare main vs master
+
+If master exists remotely:
+
+git fetch origin
+git diff main origin/master
+
+This shows code differences.
+
+If you want a summary:
+
+git log main..origin/master
+✅ Step 4: Merge branches
+Case A: Merge master → main
+
+(keep main as primary)
+
+git merge origin/master
+Case B: Merge main → master
+
+(only if you want to keep master)
+
+git checkout master
+git merge main
+✅ Step 5: Push after merge
+
+After merging:
+
+git push
+
+(or explicitly)
+
+git push origin main
+⚠️ Important note
+
+If this is a new repo, chances are:
+
+master doesn’t really exist remotely
+Your “origin/master” reference is stale
+
+Check on GitHub:
+👉 https://github.com/HrishikeshWadile/todo-list
+
+If no master branch exists there, you don’t need to merge anything—just use main.
+
+🔥 Recommended (modern workflow)
+
+Most projects now use main only, so you can:
+
+Push main
+Ignore/delete master
+
+To delete remote master (optional):
+
+git push origin --delete master
