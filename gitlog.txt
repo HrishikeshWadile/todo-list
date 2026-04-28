@@ -186,4 +186,492 @@ On branch master
 Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git logout
+git: 'logout' is not a git command. See 'git --help'.
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git --help
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git config user.name "HrishikeshWadile"
+
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git config user.email "hrishikeshwadile2510@gmail.com"
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git config user.email                  
+hrishikeshwadile2510@gmail.com
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git config user.name                   
+HrishikeshWadile
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git checkout cb3016cf7123ceb2c6017d88603659ae85069fe0
+Note: switching to 'cb3016cf7123ceb2c6017d88603659ae85069fe0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at cb3016c updated git logs
+M       gitlog.txt
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git reset --soft cb3016cf7123ceb2c6017d88603659ae85069fe0
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git pull
+You are not currently on a branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push origin HEAD:<name-of-remote-branch>
+
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git revert cb3016cf7123ceb2c6017d88603659ae85069fe0
+error: Your local changes to the following files would be overwritten by merge:
+        gitlog.txt
+Please commit your changes or stash them before you merge.
+Aborting
+fatal: revert failed
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit
+HEAD detached at cb3016c
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   gitlog.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git add .
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit
+[detached HEAD 4503c4c] Reverted back to old                                                                                  
+ 1 file changed, 34 insertions(+), 1 deletion(-)
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git pull
+You are not currently on a branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push origin HEAD:<name-of-remote-branch>
+
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git switch main
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  4503c4c Reverted back to old
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> 4503c4c
+
+Switched to branch 'main'
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git switch master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push
+Everything up-to-date
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git revert c3399e699462798e3a97a93712411b1728760436
+[master 09a3859] Revert "v2"                                                                                                  
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> PS C:\Users\CCL-10\Desktop\23510065\todo-list> git init
+Initialized empty Git repository in C:/Users/CCL-10/Desktop/23510065/todo-list/.git/
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git add .
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit
+[master (root-commit) 41ba28f] Initial Commit                                         
+ 6 files changed, 211 insertions(+)
+ create mode 100644 Dockerfile
+ create mode 100644 README.md
+ create mode 100644 app.py
+ create mode 100644 requirements.txt
+ create mode 100644 static/styles.css
+ create mode 100644 templates/index.html
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git branch -M main
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git add .
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git status
+On branch main
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit
+On branch main
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git remote -v
+origin  https://github.com/HrishikeshWadile/todo-list.git (fetch)
+origin  https://github.com/HrishikeshWadile/todo-list.git (push)
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push -u origin main
+git: 'credential-manager' is not a git command. See 'git --help'.
+
+The most similar command is
+        credential-manager-core
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'main' on GitHub by visiting:                       
+remote:      https://github.com/HrishikeshWadile/todo-list/pull/new/main              
+remote: 
+To https://github.com/HrishikeshWadile/todo-list.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git branch -a
+* main
+  remotes/origin/main
+  remotes/origin/master
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git add .
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit
+[main c32ce46] Changed the h1 to show the difference between branches                 
+ 2 files changed, 59 insertions(+), 2 deletions(-)
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push
+git: 'credential-manager' is not a git command. See 'git --help'.
+
+The most similar command is
+        credential-manager-core
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 970 bytes | 970.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.                 
+To https://github.com/HrishikeshWadile/todo-list.git
+   41ba28f..c32ce46  main -> main
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git fetch origin
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git diff main origin/maste
+fatal: ambiguous argument 'origin/maste': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git diff main origin/master
+diff --git a/README.md b/README.md
+diff --git a/README.md b/README.md
+index 47cbefc..6654c40 100644
+--- a/README.md
++++ b/README.md
+@@ -104,61 +104,4 @@ Commit history tracking for all changes
+ Conflict resolution handled manually
+ Ability to rollback using revert
+ Version tagging for builds and releases
+-Demonstrates full collaboration workflow in software development
+-
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> 
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git merge origin/master
+Already up to date.
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git psuh
+git: 'psuh' is not a git command. See 'git --help'.
+
+The most similar command is
+        push
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push
+git: 'credential-manager' is not a git command. See 'git --help'.
+
+The most similar command is
+        credential-manager-core
+Everything up-to-date
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push origin --delete master
+git: 'credential-manager' is not a git command. See 'git --help'.
+
+The most similar command is
+        credential-manager-core
+To https://github.com/HrishikeshWadile/todo-list.git
+ ! [remote rejected] master (refusing to delete the current branch: refs/heads/master)
+error: failed to push some refs to 'https://github.com/HrishikeshWadile/todo-list.git'
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git checkout master
+Switched to a new branch 'master'
+branch 'master' set up to track 'origin/master'.
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push origin --delete master
+git: 'credential-manager' is not a git command. See 'git --help'.
+
+The most similar command is
+        credential-manager-core
+To https://github.com/HrishikeshWadile/todo-list.git
+ ! [remote rejected] master (refusing to delete the current branch: refs/heads/master)
+error: failed to push some refs to 'https://github.com/HrishikeshWadile/todo-list.git'
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git config --global --unset credential.helper
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git config --global credential.helper manager-core
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git checkout -b main
+>> git push origin main
+fatal: a branch named 'main' already exists
+Everything up-to-date
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push origin --delete main          
+To https://github.com/HrishikeshWadile/todo-list.git
+ - [deleted]         main
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        modified:   templates/index.html
+
+Unmerged paths:
+  (use "git add/rm <file>..." as appropriate to mark resolution)
+        deleted by us:   README.md
+
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       README.md
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git add .
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit
+[master 1d8c437] Merge branch 'master' of https://github.com/HrishikeshWadile/todo-list PS C:\Users\CCL-10\Desktop\23510065\todo-list> git init IPS C:\Users\CCL-10\Desktop\23510065\todo-list> git init Initialized empty Git repository in C:/Users/CCL-10/Desktop/23510065/todo-list/.git/ PS C:\Users\CCL-10\Desktop\23510065\todo-list> git add . PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit [master (root-commit) 41ba28f] Initial Commit  6 files changed, 211 insertions(+)  create mode 100644 Dockerfile  create mode 100644 README.md  create mode 100644 app.py  create mode 100644 requirements.txt  create mode 100644 static/styles.css  create mode 100644 templates/index.html PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push fatal: No configured push destination. Either specify the URL from the command-line or configure a remote repository using
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit\                            
+git: 'commit\' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit 
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 3.54 KiB | 3.54 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.                  
+To https://github.com/HrishikeshWadile/todo-list.git
+   6b86383..1d8c437  master -> master
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git logout
+git: 'logout' is not a git command. See 'git --help'.
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git --help
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git config user.name "HrishikeshWadile"
+
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git config user.email "hrishikeshwadile2510@gmail.com"
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git config user.email                  
+hrishikeshwadile2510@gmail.com
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git config user.name                   
+HrishikeshWadile
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git checkout cb3016cf7123ceb2c6017d88603659ae85069fe0
+Note: switching to 'cb3016cf7123ceb2c6017d88603659ae85069fe0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at cb3016c updated git logs
+M       gitlog.txt
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git reset --soft cb3016cf7123ceb2c6017d88603659ae85069fe0
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git pull
+You are not currently on a branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push origin HEAD:<name-of-remote-branch>
+
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git revert cb3016cf7123ceb2c6017d88603659ae85069fe0
+error: Your local changes to the following files would be overwritten by merge:
+        gitlog.txt
+Please commit your changes or stash them before you merge.
+Aborting
+fatal: revert failed
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit
+HEAD detached at cb3016c
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   gitlog.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git add .
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit
+[detached HEAD 4503c4c] Reverted back to old                                                                                  
+ 1 file changed, 34 insertions(+), 1 deletion(-)
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git pull
+You are not currently on a branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push origin HEAD:<name-of-remote-branch>
+
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git switch main
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  4503c4c Reverted back to old
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> 4503c4c
+
+Switched to branch 'main'
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git commit
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git switch master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git push
+Everything up-to-date
+PS C:\Users\CCL-10\Desktop\23510065\todo-list> git revert c3399e699462798e3a97a93712411b1728760436
+[master 09a3859] Revert "v2"                                                                                                  
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 PS C:\Users\CCL-10\Desktop\23510065\todo-list> 
